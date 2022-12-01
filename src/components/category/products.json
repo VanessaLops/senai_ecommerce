@@ -1,0 +1,61 @@
+{
+  "products": [
+    {
+      "hamburguer": [
+        {
+          "id": 1,
+          "nome": "1",
+          "nota": 8
+        },
+        {
+          "id": 2,
+          "nome": "2",
+          "nota": 5.3
+        }
+      ]
+    },
+
+    {
+      "pizza": [
+        {
+          "id": 1,
+          "nome": "1",
+          "nota": 8
+        },
+        {
+          "id": 2,
+          "nome": "2",
+          "nota": 5.3
+        }
+      ]
+    },
+    {
+      "japonesa": [
+        {
+          "id": 1,
+          "nome": "1",
+          "nota": 8
+        },
+        {
+          "id": 2,
+          "nome": "2",
+          "nota": 5.3
+        }
+      ]
+    },
+    {
+      "sobremesa": [
+        {
+          "id": 1,
+          "nome": "1",
+          "nota": 8
+        },
+        {
+          "id": 2,
+          "nome": "2",
+          "nota": 5.3
+        }
+      ]
+    }
+  ]
+}
