@@ -7,8 +7,8 @@ import {
   View,
 } from "react-native";
 
-import {products} from './products.json'
-export default function Category() {
+import { products } from "./products.json";
+export default function Category({ modal }) {
   const [array, setArray] = useState([
     {
       id: 1,
@@ -34,7 +34,9 @@ export default function Category() {
         <ScrollView horizontal>
           {array.map((item) => {
             return (
-              <TouchableOpacity>
+              <TouchableOpacity
+              
+              >
                 <View
                   style={{
                     height: 28,
@@ -46,16 +48,13 @@ export default function Category() {
                     alignItems: "center",
                   }}
                 >
-                  <Text style={{color:'white'}}>{item.title}</Text>
+                  <Text style={{ color: "white" }}>{item.title}</Text>
                 </View>
               </TouchableOpacity>
             );
           })}
-
         </ScrollView>
       </SafeAreaView>
-
-    
     </View>
   );
 }

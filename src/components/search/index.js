@@ -1,9 +1,17 @@
-import React from "react";
-import { Text, TextInput, View } from "react-native";
+import React, { useState } from "react";
+import {
+  KeyboardAvoidingView,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  TouchableWithoutFeedback,
+  View,
+} from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome5";
 import Banner from "../banner";
 
-export default function SearchInput({ title }) {
+export default function SearchInput({ title, menu, setMenu }) {
+  const [modal, setModal] = useState(false);
   return (
     <>
       <View style={{ flexDirection: "row", flex: 1 }}>
@@ -30,7 +38,12 @@ export default function SearchInput({ title }) {
             color="#D9D9D9"
             style={{ marginLeft: 10 }}
           />
-          <TextInput placeholder={title} style={{ left: 5 }}></TextInput>
+          <TextInput
+            editable={false}
+            selectTextOnFocus={false}
+            placeholder={title}
+            style={{ left: 5 }}
+          ></TextInput>
           <View
             style={{
               height: 25,
@@ -40,12 +53,18 @@ export default function SearchInput({ title }) {
               left: 80,
             }}
           >
-            <Icon
-              name="bars"
-              size={20}
-              color="#F3890C"
-              style={{ marginLeft: 10, right: 5, top: 1 }}
-            />
+            <TouchableOpacity
+              onPress={() => {
+                setMenu(!menu);
+              }}
+            >
+              <Icon
+                name="bars"
+                size={20}
+                color="#F3890C"
+                style={{ marginLeft: 10, right: 5, top: 1 }}
+              />
+            </TouchableOpacity>
           </View>
         </View>
       </View>
